@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+ 
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+       
+        <div id="logo">
+
+
+            <img src="logo.png" alt="Logo" width="60px" height="80px">
+
+            <h4><i> TravelBloom </i></h4>
+
+
+
+        </div>
+
+        <div id="links">
+
+            <ul>
+                <li><a href="travel_recommendation.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+        </div>
+
+      
+    </nav>
+
+   <section class="contact-hero">
+
+    <div class="overlay"></div>
+
+    <div class="social-icons">
+            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+    </div>
+
+   <div class="vertical-line"></div>
+
+    <div class="contact-content">
+        <div class="left">
+            <h1>CONTACT US</h1>
+            <p>Get in touch</p>
+        </div>
+
+        <div class="right">
+            <form action="" class="contact-form" onsubmit="feedback(event)">
+
+                <label for="">Name</label>
+
+                <input type="text" placeholder="Enter your name">
+
+                <label>Email</label>
+
+                <input type="email" name="" id="" placeholder="Enter your email">
+
+                <label>Message</label>
+
+                <textarea placeholder="Enter your message"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+   </section>
+  <script>
+        function feedback(e) {
+            e.preventDefault(); // stop page reload
+
+            const name = document.querySelector('input[type="text"]').value.trim();
+            const email = document.querySelector('input[type="email"]').value.trim();
+            const message = document.querySelector('textarea').value.trim();
+
+            // Basic validation
+            if (name === "" || email === "" || message === "") {
+                alert("⚠️ Please fill in all the fields before submitting.");
+                return;
+            }
+
+            if (!email.includes("@")) {
+                alert("⚠️ Please enter a valid email address.");
+                return;
+            }
+
+            // Simulated success response
+            alert(
+                `✅ Thank you, ${name}!\n\n` +
+                `Your message has been received successfully.\n` +
+                `We will contact you at ${email} shortly.`
+            );
+
+            // Clear form after submission
+            document.querySelector('.contact-form').reset();
+        }
+  </script>
+</body>
+</html>

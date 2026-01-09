@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+nav{
+    background: linear-gradient(
+        90deg,
+        #0b2a2a 0%,
+        #163f3a 50%,
+        #1f4f46 100%
+    );
+    display: flex;
+    justify-content: space-between;
+}
+nav a,
+nav h4 {
+    color: #ffffff;
+}
+
+nav #logo{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    width: 300px;
+    height: 100px;
+}
+
+nav ul li{
+    list-style: none;
+    
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+
+
+
+nav #search{
+    background-color: white;
+    width: 350px;
+    margin-top: 20px;
+    height: 40px;
+    border: 5px solid white;
+    border-radius: 27px;
+    display: flex;
+    justify-content: center;
+}
+#search_bar{
+    width: 200px;
+    height: 30px;
+    border: white;
+}
+#search-btn{
+    margin-top: 4px;
+    background-color: green;
+}
+#clear-btn{
+    background-color: red;
+}
+#search_bar:focus{
+    border: 2px solid white;
+    outline: none;
+}
+
+.social-icons {
+    position: absolute;
+    left: 35px;
+    top: 55%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    z-index: 3;
+}
+.social-icons a{
+
+    color: white;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    opacity: 1;
+}
+
+#main-content{
+    margin-left: 90px;
+    margin-top: 200px;
+}
+
+#main-content h1{
+    color: green;
+    font-size: 49px;
+}
+#main-content p{
+    color:green
+}
+.hero {
+  min-height: 100vh;
+
+  background: url("city.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.hero-content{
+
+    position: absolute;
+    top: 200px;
+    left: 90px;
+
+    max-width: 600px;
+   
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 49px;
+}
+
+.hero-content p {
+    color: white;
+}
+
+#result{
+
+    display: none;
+
+    position: absolute;
+    top: 120px;
+    right:50px;
+
+    width:420px;
+    max-height: 70vh;
+
+    background-color: white;
+    border-radius: 12px;
+
+    overflow-y: auto;
+    z-index: 10;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    padding: 15px;
+   
+}
+
+.result-card {
+    margin-bottom: 15px;
+}
+
+.result-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.result-card h3 {
+    margin: 10px 0 5px;
+}
+
+.result-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
